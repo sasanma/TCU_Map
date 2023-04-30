@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>TCU Map</title>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.136.0/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.136.0/examples/jsm/"
+				}
+			}
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@0.131.2/examples/js/loaders/GLTFLoader.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@0.131.2/examples/js/controls/OrbitControls.js"></script>
+	</head>
+	<body>
+		<h1 id="title">東京都市大学 横浜キャンパスMap</h1>
+		<div id="btn">
+			<div></div>
+			<div>？</div>
+			<div></div>
+		</div>
+		<div id="triangle" class="operation_panel"></div>
+		<div id="operation_explain" class="operation_panel">
+			回転：左ボタンでドラッグ<br />ズーム：マウスホイール<br />移動：右ボタンでドラッグ
+		</div>
+		<div id="panel">
+			<div id="explain_panel">
+				<h2 id="name">1号館</h2>
+				<div id="explain">-------------------------------------------</div>
+				<h3>施設一覧</h3>
+				<ul id="facilities"></ul>
+			</div>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+		<script src="./main.js" type="module"></script>
+	</body>
+</html>
